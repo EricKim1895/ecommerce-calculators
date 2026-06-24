@@ -1,11 +1,16 @@
-# Etsy Fee & Profit Calculator
+# Ecommerce Fee & Profit Calculators
 
-A free Etsy fee and profit calculator for estimating Etsy seller fees, net profit, profit margin, break-even price, and the selling price needed to reach a target margin.
+A free ecommerce fee and profit calculator suite for estimating seller fees, net profit, profit margin, break-even price, and the selling price needed to reach a target margin.
 
 ## Features
 
+- Umbrella homepage for ecommerce calculators
 - Etsy fee estimate for US sellers
-- Listing fee, transaction fee, payment processing fee, and Offsite Ads fee
+- eBay fee estimate with editable final value, ad, fixed, and insertion fees
+- PayPal fee estimate with editable percentage and fixed payment fees
+- Shopify profit estimate with editable payment and third-party transaction fees
+- Amazon FBA estimate with editable referral, fulfillment, and landed costs
+- TikTok Shop fee estimate with editable referral and creator commission fees
 - Detailed costs mode
 - Total cost only mode
 - Net profit and profit margin
@@ -23,7 +28,18 @@ npm run dev -- --host 0.0.0.0 --port 5173
 Open:
 
 ```text
-http://127.0.0.1:5173/etsy-fee-calculator
+http://127.0.0.1:5173/
+```
+
+Calculator routes:
+
+```text
+/etsy-fee-calculator
+/ebay-fee-calculator
+/paypal-fee-calculator
+/shopify-profit-calculator
+/amazon-fba-calculator
+/tiktok-shop-fee-calculator
 ```
 
 ## Build
@@ -34,4 +50,4 @@ npm run build
 
 ## Notes
 
-This calculator provides estimates based on publicly available Etsy fee information. It is not affiliated with, endorsed by, or sponsored by Etsy, Inc.
+These calculators provide independent estimates based on editable US fee defaults. They are not affiliated with, endorsed by, or sponsored by Etsy, eBay, PayPal, Shopify, Amazon, TikTok, or their related companies.

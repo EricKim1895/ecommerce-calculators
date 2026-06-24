@@ -27,6 +27,53 @@ main {
   min-height: 100vh;
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid #ded8cc;
+  padding: 14px max(16px, calc((100% - 1180px) / 2));
+  background: rgb(247 245 240 / 94%);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  flex: 0 0 auto;
+  color: #1d2327;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.tool-nav {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tool-nav a {
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: #42515c;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.tool-nav a:hover,
+.tool-nav a.active {
+  border-color: #cfe6df;
+  background: #eef8f5;
+  color: #1f6f64;
+}
+
 .tool-hero,
 .content {
   width: min(1180px, calc(100% - 32px));
@@ -59,6 +106,49 @@ h1 {
   color: #56616a;
   font-size: 1.08rem;
   line-height: 1.6;
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.tool-card {
+  display: grid;
+  gap: 9px;
+  min-height: 190px;
+  border: 1px solid #ded8cc;
+  border-radius: 8px;
+  padding: 20px;
+  background: #fffdf8;
+  box-shadow: 0 16px 36px rgb(53 45 31 / 8%);
+  color: inherit;
+  text-decoration: none;
+}
+
+.tool-card:hover {
+  border-color: #87b9ad;
+}
+
+.tool-card span {
+  color: #1f6f64;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tool-card strong {
+  color: #1d2327;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.tool-card p {
+  margin: 0;
+  color: #56616a;
+  line-height: 1.55;
 }
 
 .calculator-layout {
@@ -148,7 +238,7 @@ input {
   min-width: 0;
   border: 0;
   outline: 0;
-  padding: 11px 0 11px 8px;
+  padding: 11px 8px;
   background: transparent;
   color: inherit;
 }
@@ -435,8 +525,14 @@ details p {
 }
 
 @media (max-width: 860px) {
+  .site-header {
+    display: grid;
+    align-items: start;
+  }
+
   .calculator-layout,
-  .field-grid {
+  .field-grid,
+  .tool-grid {
     grid-template-columns: 1fr;
   }
 
@@ -449,6 +545,10 @@ details p {
   .tool-hero,
   .content {
     width: min(100% - 24px, 1180px);
+  }
+
+  .site-header {
+    padding: 12px;
   }
 
   .tool-hero {

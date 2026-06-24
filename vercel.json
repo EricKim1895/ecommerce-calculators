@@ -1,14 +1,31 @@
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/etsy-fee-calculator",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/etsy-fee-calculator",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/ebay-fee-calculator",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/paypal-fee-calculator",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/shopify-profit-calculator",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/amazon-fba-calculator",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/tiktok-shop-fee-calculator",
       "destination": "/index.html"
     }
   ]
