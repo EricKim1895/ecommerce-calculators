@@ -1,1 +1,15 @@
-{}
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/etsy-fee-calculator",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/etsy-fee-calculator",
+      "destination": "/index.html"
+    }
+  ]
+}
